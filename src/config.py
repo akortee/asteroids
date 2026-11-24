@@ -41,9 +41,8 @@ SHIP_DRAG: float = 1.8  # Коэффициент затухания скорос
 MISSILE_SPEED: float = 500.0  # Постоянная скорость полёта ракеты (px/s)
 MISSILE_RADIUS: float = 4.0
 FIRE_COOLDOWN: float = 0.22  # Минимальный интервал между выстрелами (сек)
-# Ракета не должна пролетать всё поле даже по малому измерению:
-# T_cross = min(SCREEN_WIDTH, SCREEN_HEIGHT) / MISSILE_SPEED.
-# Задаём время жизни строго меньше T_cross (0.65 от полного пролёта).
+
+# Время жизни ракеты строго меньше T_cross (0.65 от полного пролёта).
 MISSILE_LIFETIME: float = (
     0.65 * (min(SCREEN_WIDTH, SCREEN_HEIGHT) / MISSILE_SPEED)
 )
